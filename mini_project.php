@@ -25,8 +25,12 @@
                         }else{
                             $result = "Pembagian dengan nol tidak di perbolehkan";
                         }
-                        break;
+                        // ternary expression
+                        // $num2 !=0 ? $result =$num1 + $num2 : $result = "Error Pembagian dengan nol tidak di perbolehkan";
+                        // break;
         }
+    }else{
+        echo "Angka tidak valid";
     }
     echo $num1;
   }
@@ -46,20 +50,20 @@
 
 
     <form action="mini_project.php" method="post" class="calculator-form">
-        <input type="text" id="num1" name="num1" placeholder="Masukkan Angka">
-        <input type="text" id="num2" name="num2" placeholder="Masukkan Angka Kedua">
+        <input type="text" id="num1" name="num1" placeholder="Masukkan Angka" value="<?php echo isset($_POST["num1"]) ? $_POST ["num1"] : '' ?>">
+        <input type="text" id="num2" name="num2" placeholder="Masukkan Angka Kedua" value="<?php echo isset($_POST["num2"]) ? $_POST ["num2"] : '' ?>">
 
         <select name="operator" id="operator" class="operator">
-            <option value="add">
+            <option  <?= isset($_POST['operator']) && $_POST ['operator'] == 'add' ? "selected" : "" ?>  value="add">
                 Tambah
             </option>
-            <option value="subtract">
+            <option <?= isset($_POST['operator']) && $_POST ['operator'] == 'subtract' ? "selected" : "" ?> value="subtract">
                 Kurang
             </option>
-            <option value="multiply">
+            <option <?= isset($_POST['operator']) && $_POST['operator'] == 'multiply' ? "selected" : "" ?>  value="multiply">
                 Kali
             </option>
-            <option value="divide">
+            <option <?= isset($_POST['operator']) && $_POST['operator'] == 'divide' ? "selected" : "" ?>  value="divide">
                 Bagi 
             </option>
         </select>
