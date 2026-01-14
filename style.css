@@ -1,0 +1,80 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.calculator-container{
+    background-color: white;
+    padding: 150px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px ;
+    width: 100%;
+    max-width: 450px;
+
+}
+
+h1{
+    
+    font-size: 24px;
+}
+
+.calculator-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+
+.calculaltor-form input[type="text"], .calculator-form select{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.operator{
+    background-color: #f4f4f9;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+
+.calc-btn{
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ccc;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px;
+
+}
+
+.calc-btn:hover{
+    background-color: aqua;
+    transition: all 0.3s ease;
+}
+
+.result{
+    padding: 10px;
+    background-color: #ccc;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+
+
+
+}
